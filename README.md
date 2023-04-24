@@ -7,7 +7,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines/Computer)
 - Remote Desktop
 - Various Command-Line Tools
 - Various Network Protocols (ICMP, SSH, DHCP, DNS, RDP)
@@ -34,7 +34,7 @@ Before we begin, if you haven’t already created an Azure Account or don’t kn
 
 <h3>Step 1: Create VMs & Download Wireshark</h3>
 
-We have to create two virtual machines (VMs) in Azure.
+We want to create two virtual machines (VMs) in Azure.
 - Create Resource Group
 - Create Windows 10 Virtual Machine (VM)
 - Create a Linux (Ubuntu) VM
@@ -55,7 +55,7 @@ Wireshark is a network protocol analyzer that can be used to see packets being c
 Internet Control Message Protocol (ICMP) is a network protocol that sends information about problems with network connectivity.
 
 **ICMP**
-- In Wireshark filter for “icmp” traffic only by typing it in the green search bar
+- In Wireshark, filter for “icmp” traffic by typing it in the green search bar
 - Retrieve the private IP address of the Ubuntu VM in Azure which is (10.0.0.5)
 - In VM1 open up powershell and try to ping the private IP address. Observe the ping requests and replies within Wireshark
 
@@ -104,13 +104,13 @@ Disable incoming (inbound) ICMP traffic
 <img src="https://i.imgur.com/5bQP6hJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
-Once finished, head back to the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity. Requests to time out and show no answer because ICMP traffic is being blocked.
+Once finished, head back to the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity. Requests should time out and show no answer because the ICMP traffic is being blocked.
 
 <p>
 <img src="https://i.imgur.com/JjJZipV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
-We’ll head back to the Azure portal and re-enable ICMP traffic. You have two options: remove the rules or allow them. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity (should start working).
+We’ll head back to the Azure portal and re-enable ICMP traffic. You are confronted with two options: remove the rules or allow them. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity (should start working).
 
 <p>
 <img src="https://i.imgur.com/9beAIwh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
